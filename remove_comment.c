@@ -1,21 +1,21 @@
 #include "monty.h"
 
 /**
- * remove_comment - removes comments from a string
- * @str: the string to remove comments from
+ * removeComment - removes comments from a string
+ * @commands: the string to remove comments from
  */
 void removeComment(char *commands)
 {
-    int i;
+	int i;
 
-    for (i = 0; commands[i]; i++)
-    {
-        if (commands[i] == '#')
-        {
-            commands[i] = '\0';  /* replace '#' with null character */
-            break;
-        }
-    }
+	for (i = 0; commands[i]; i++)
+	{
+		if (commands[i] == '#')
+		{
+			commands[i] = '\0';  /* replace '#' with '\0' */
+			break;
+		}
+	}
 }
 
 
@@ -39,7 +39,7 @@ void opQueue(stack_t **stack, unsigned int lineNumber)
  */
 void opStack(stack_t **stack, unsigned int lineNumber)
 {
-        (void)*stack;
-        (void)lineNumber;
-        prgctl.mode = 0;
+	(void)*stack;
+	(void)lineNumber;
+	prgctl.mode = 0;
 }

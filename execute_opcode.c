@@ -14,26 +14,12 @@ int executeOpcode(char *commands, stack_t **stack, unsigned int lineNumber)
 
 	/* opcode and it's function.. {opcode, f(...)} */
 	instruction_t opFunction[] = {
-		{"push", push},
-		{"pall", pall},
-		{"pint", pint},
-		{"pop", pop},
-		{"swap", swap},
-		{"add", add},
-		{"nop", nop},
-		{"sub", sub},
-		{"div", divi},
-		{"mul", mul},
-		{"mod", mod},
-		{"pchar", pchar},
-		{"pstr", pstr},
-		{"rotl", rotl},
-		{"rotr", rotr},
-		{"queue", opQueue},
-		{"stack", opStack},
-		{NULL, NULL}
+		{"push", push}, {"pall", pall}, {"pint", pint}, {"pop", pop},
+		{"swap", swap}, {"add", add}, {"nop", nop}, {"sub", sub},
+		{"div", divi}, {"mul", mul}, {"mod", mod}, {"pchar", pchar},
+		{"pstr", pstr}, {"rotl", rotl}, {"rotr", rotr},
+		{"queue", opQueue}, {"stack", opStack}, {NULL, NULL}
 	};
-
 	/* check if command isn't NULL */
 	if (!commands[0])
 	{
