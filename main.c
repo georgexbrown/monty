@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 	while (getline(&lineContent, &len, montyFile) != -1)
 	{
 		commands = strtok(lineContent, " \n\t");  /*tokenize contents*/
-	/*	removeComment(commands);   function that removes comment */
+		removeComment(commands);  /* function that removes comment */
 		prgctl.arg = strtok(NULL, " \n\t");
 		lineCounter++;
 		/* check 'commands' isn't empty so as to execute */

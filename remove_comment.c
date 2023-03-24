@@ -1,15 +1,19 @@
 #include "monty.h"
 
 /**
- * removeComment - 
- *
+ * remove_comment - removes comments from a string
+ * @str: the string to remove comments from
  */
-void removeComment(char *line)
+void removeComment(char *commands)
 {
-	/* finding the first occurrence of '#' as a comment */
-	char *comment = strchr(line, '#');
+    int i;
 
-	/* replacing the '#'  with a null terminator if not NULL */
-	if (!comment)
-		*comment = '\0';
+    for (i = 0; str[i]; i++)
+    {
+        if (str[i] == '#')
+        {
+            str[i] = '\0';  /* replace '#' with null character */
+            break;
+        }
+    }
 }

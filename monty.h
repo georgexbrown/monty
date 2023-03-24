@@ -62,6 +62,7 @@ int executeOpcode(char *commands, stack_t **stack, unsigned int lineNumber);
 void freeAll(void);
 void freeStack(stack_t **stack);
 ssize_t _getline(char **lineptr, size_t *n, FILE *stream);
+void removeComment(char *commands);
 
 /* Opcode Functions */
 void push(stack_t **stack, unsigned int lineNumber);
