@@ -66,23 +66,23 @@ ssize_t _getline(char **lineptr, size_t *n, FILE *stream);
 /* Opcode Functions */
 void push(stack_t **stack, unsigned int lineNumber);
 void pushStack(stack_t **stack, int n);
-void pushQueue(stack_t **stack, int n);
+void pushQueue(stack_t **queue, int n);
 void pall(stack_t **stack, unsigned int lineNumber);
-void pint(stack_t **stack, unsigned int line_number, char *arg);
-void pop(stack_t **stack, unsigned int line_number, char *arg);
-void swap(stack_t **stack, unsigned int line_number, char *arg);
-void add(stack_t **stack, unsigned int line_number, char *arg);
-void nop(stack_t **stack, unsigned int line_number, char *arg);
-void sub(stack_t **stack, unsigned int line_number, char *arg);
-void divi(stack_t **stack, unsigned int line_number, char *arg);
-void mul(stack_t **stack, unsigned int line_number, char *arg);
-void mod(stack_t **stack, unsigned int line_number, char *arg);
-void pchar(stack_t **stack, unsigned int line_number, char *arg);
-void pstr(stack_t **stack, unsigned int line_number, char *arg);
-void rotl(stack_t **stack, unsigned int line_number, char *arg);
-void rotr(stack_t **stack, unsigned int line_number, char *arg);
-void queue(stack_t **stack, unsigned int line_number, char *arg);
-void stack(stack_t **stack, unsigned int line_number, char *arg);
+void pint(stack_t **stack, unsigned int lineNumber);
+void pop(stack_t **stack, unsigned int lineNumber);
+void swap(stack_t **stack, unsigned int lineNumber);
+void add(stack_t **stack, unsigned int lineNumber);
+void nop(stack_t **stack, unsigned int lineNumber);
+void sub(stack_t **stack, unsigned int lineNumber);
+void divi(stack_t **stack, unsigned int lineNumber);
+void mul(stack_t **stack, unsigned int lineNumber);
+void mod(stack_t **stack, unsigned int lineNumber);
+void pchar(stack_t **stack, unsigned int lineNumber);
+void pstr(stack_t **stack, unsigned int lineNumber);
+void rotl(stack_t **stack, unsigned int lineNumber);
+void rotr(stack_t **stack, unsigned int lineNumber);
+void queue(stack_t **stack, unsigned int lineNumber);
+void stack(stack_t **stack, unsigned int lineNumber);
 
 
 #endif /* _MONTY_H_ */

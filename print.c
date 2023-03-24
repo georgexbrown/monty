@@ -29,13 +29,12 @@ void pall(stack_t **stack, unsigned int lineNumber)
  */
 void pint(stack_t **stack, unsigned int lineNumber)
 {
-	stack_t *head = *stack;
 
-	if (var.stack_len == 0)
+	if (*stack == NULL)
 	{
 		fprintf(stderr, "L%u: can't pint, stack empty\n",
 				lineNumber);
 		exit(EXIT_FAILURE);
 	}
-	printf("%d\n", head->n);
+	printf("%d\n", (*stack)->n);
 }
