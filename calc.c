@@ -57,7 +57,7 @@ void mul(stack_t **stack, unsigned int lineNumber)
  * @stack: Double pointer to the beginning of the stack
  * @lineNumber: Number of the line in the file being executed
  */
-void divide(stack_t **stack, unsigned int lineNumber)
+void divi(stack_t **stack, unsigned int lineNumber)
 {
 	if (!*stack || !(*stack)->next)
 	{

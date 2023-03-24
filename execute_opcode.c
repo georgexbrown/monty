@@ -22,7 +22,7 @@ int executeOpcode(char *commands, stack_t **stack, unsigned int lineNumber)
 		{"add", add},
 		{"nop", nop},
 		{"sub", sub},
-		{"div", divide},
+		{"div", divi},
 		{"mul", mul},
 		{"mod", mod},
 		{"pchar", pchar},

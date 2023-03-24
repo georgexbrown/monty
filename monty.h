@@ -82,8 +82,7 @@ void pchar(stack_t **stack, unsigned int lineNumber);
 void pstr(stack_t **stack, unsigned int lineNumber);
 void rotl(stack_t **stack, unsigned int lineNumber);
 void rotr(stack_t **stack, unsigned int lineNumber);
-void queue(stack_t **stack, unsigned int lineNumber);
-void stack(stack_t **stack, unsigned int lineNumber);
-
+void opQueue(stack_t **stack, unsigned int lineNumber);
+void opStack(stack_t **stack, unsigned int lineNumber);
 
 #endif /* _MONTY_H_ */
