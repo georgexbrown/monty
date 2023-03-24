@@ -1,9 +1,8 @@
 #include "monty.h"
 
 /**
- * freeStack - 
- * @head:
- *
+ * freeStack - frees all elements of a stack_t stack
+ * @stack: pointer to the top (stack) or bottom (queue) of the stack*
  * Return: nothing
  */
 

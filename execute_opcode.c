@@ -1,14 +1,17 @@
 #include "monty.h"
 
 /**
- * executeOpcode - 
+ * executeOpcode - check opcode against valid opcodes
+ * @commands: opcode passed (to check)
+ * @stack: pointer to head of stack
+ * @lineNumber: number of line currently working on
  *
- *
+ * Return: 1 on error, 0 on success
  */
 int executeOpcode(char *commands, stack_t **stack, unsigned int lineNumber)
 {
 	unsigned int i;
-	
+
 	/* opcode and it's function.. {opcode, f(...)} */
 	instruction_t opFunction[] = {
 		{"push", push},

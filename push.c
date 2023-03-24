@@ -17,7 +17,7 @@ void push(stack_t **stack, unsigned int lineNumber)
 		fprintf(stderr, "L%u: usage: push integer\n", lineNumber);
 		exit(EXIT_FAILURE);
 	}
-	
+
 	n = atoi(prgctl.arg);
 	if (prgctl.mode == 0)
 		pushStack(stack, n);
@@ -26,9 +26,9 @@ void push(stack_t **stack, unsigned int lineNumber)
 }
 
 /**
- * pushStack - 
- * @stack:
- * @n:
+ * pushStack - pushes a new node onto the top of the stack
+ * @stack: double pointer to the top of the stack
+ * @n: integer value to be added to the new node
  * Return: nothing
  */
 void pushStack(stack_t **stack, int n)
@@ -51,16 +51,14 @@ void pushStack(stack_t **stack, int n)
 }
 
 /**
- * pushQueue - 
- * @stack:
- * @n:
+ * pushQueue - pushes a new node onto the top of the queue
+ * @queue: double pointer to the top of the stack
+ * @n: integer value to be added to the new node
  * Return: nothing
  */
-void pushQueue(stack_t **stack, int n)
+void pushQueue(stack_t **queue, int n)
 {
-	(void)*stack;
-	(void)n;
-/*	stack_t *newNode;
+	stack_t *newNode, *temp;
 
 	newNode = malloc(sizeof(stack_t));
 	if (!newNode)
@@ -69,4 +67,21 @@ void pushQueue(stack_t **stack, int n)
 		exit(EXIT_FAILURE);
 	}
 
-*/}
+	newNode->n = n;
+	newNode->next = NULL;
+
+	if (*queue == NULL)
+	{
+		newNode->prev = NULL;
+		*queue = newNode;
+	}
+
+	temp = *queue;
+	while (temp->next)
+		temp = temp->next;
+
+	temp->next = newNode;
+	newNode->prev = temp;
+
+}
+
