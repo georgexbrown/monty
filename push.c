@@ -9,8 +9,10 @@
 
 void push(stack_t **stack, unsigned int lineNumber)
 {
-	int n;
+	int n, m = 0;
 
+	if (prgctl.arg[0] == '-')
+		m++;
 	/* check if arg to be pushed is NULL */
 	if (!prgctl.arg || !isdigit(prgctl.arg[0]))
 	{
